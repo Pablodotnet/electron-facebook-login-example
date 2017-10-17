@@ -1,0 +1,27 @@
+{
+  "name": "electron-facebook-login-example",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/Pablodotnet/electron-facebook-login-example",
+  "keywords": [
+    "Electron",
+    "facebook",
+    "login",
+    "api",
+    "demo",
+    "example",
+    "facebook-authentication"
+  ],
+  "author": "Pablodotnet",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "~1.7.8"
+  },
+  "dependencies": {
+    "fb": "^2.0.0"
+  }
+}

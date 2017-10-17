@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <!-- BOOTSTRAP 3 -->
+  <link href="assets/css/bootstrap.css" rel="stylesheet">
+  <!-- FONTAWESOME -->
+  <link href="assets/css/font-awesome.css" rel="stylesheet">
+  <link href="assets/css/docs.css" rel="stylesheet">
+  <!-- BOOTSTRAP SOCIAL -->
+  <link href="assets/css/bootstrap-social.css" rel="stylesheet">
+
+  <title>Electron Facebook Login Example!</title>
+</head>
+
+<body>
+  <h1 style="text-align:center; margin-bottom: 50px;">Electron Facebook Login Example!</h1>
+  <div class="row" style="margin-bottom: 30px;">
+    <div class="col-xs-6 col-sm-4"></div>
+    <div class="col-xs-6 col-sm-4">
+      <a id="fb-button" class="btn btn-block btn-social btn-facebook" onclick="loginWithFB();">
+        <span class="fa fa-facebook"></span> Sign in with Facebook
+      </a>
+    </div>
+    <div class="col-xs-6 col-sm-4"></div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <!-- Card Projects -->
+      <div class="col-md-6 col-md-offset-3">
+        <div class="card">
+          <div class="card-image">
+            <img id="fb-pp" style="width:200px; height:200px;" class="img-responsive" src="assets/img/default-profile-pic.jpg">
+            <span id="fb-name" class="card-title"></span>
+          </div>
+
+          <div class="card-content">
+            <p id="fb-id"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/jquery.js"></script>
+  <script src="assets/js/docs.js"></script>
+  <script>
+    // You can also require other files to run in this process
+    require('./renderer.js')
+    const { ipcRenderer } = require('electron')
+    var loginWithFB = function () {
+      ipcRenderer.send("fb-authenticate", "yes");
+    };
+  </script>
+</body>
+
+</html>
