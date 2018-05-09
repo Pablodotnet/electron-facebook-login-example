@@ -19,7 +19,7 @@
   "author": "Pablodotnet",
   "license": "MIT",
   "devDependencies": {
-    "electron": "~1.7.8"
+    "electron": "^2.0.0"
   },
   "dependencies": {
     "fb": "^2.0.0"
