@@ -1,6 +1,9 @@
 # Electron FB Login Example
 
 This is an example to create a FB Login on Electron Apps.
+Using latest version of Electron.
+
+⚠️ If you use Electron 2.* you can see the example changing branch to "example-with-electron-2" ⚠️
 
 ## Install dependencies
 ````
