@@ -1,11 +1,7 @@
-const electron = require('electron')
-const ipcMain = electron.ipcMain;
-var FB = require('fb');
-
-// Module to control application life.
-const app = electron.app
-// Module to create native browser window.
-const BrowserWindow = electron.BrowserWindow
+const { app, BrowserWindow, ipcMain } = require('electron')
+const FB = require('fb');
+const fs = require('fs');
+var Env = JSON.parse(fs.readFileSync(`${__dirname}/env.json`));
 
 const path = require('path')
 const url = require('url')
@@ -65,7 +61,7 @@ app.on('activate', function () {
 // Code to create fb authentication window
 ipcMain.on('fb-authenticate', function (event, arg) {
   var options = {
-    client_id: 'HERE_GOES_YOUR_FB_APP_ID',
+    client_id: Env.fb_client_id,
     scopes: 'public_profile',
     redirect_uri: 'https://www.facebook.com/connect/login_success.html'
   };
