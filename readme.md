@@ -5,6 +5,13 @@ Using latest version of Electron.
 
 ⚠️ If you use Electron 2.* you can see the example changing branch to "example-with-electron-2" ⚠️
 
+## Create env.json file
+⚠️ After this step add your Facebook App ID to env.json ⚠️
+
+````
+cp env.example.json env.json
+````
+
 ## Install dependencies
 ````
 npm install
